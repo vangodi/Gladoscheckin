@@ -53,7 +53,7 @@ if __name__ == '__main__':
                 # 获取剩余时间
                 leftdays = int(float(result['data']['leftDays']))
                 # 获取账号email
-                email = result['data']['email']
+                email = result['data']['email'][:5]
                 
                 print(check_result)
                 if "Checkin! Got" in check_result:
@@ -95,3 +95,4 @@ if __name__ == '__main__':
     else:
         pushdeer = PushDeer(pushkey=sckey) 
         pushdeer.send_text(title, desp=context)
+
